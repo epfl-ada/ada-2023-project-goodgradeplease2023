@@ -1,12 +1,11 @@
 ## How is mobility linked to wikipedia usage
 
 
-This project aims to show the relationship between mobility and the wikipedia pages frequented. 
+This project aims to show the relationship between mobility and the wikipedia pages frequented. The story 
 
 Research Questions:
-- How 
-
-
+- How did wikipedia traffic change in each country (language of the pages accessed)
+- Is there a relationship between this change and the mobility
 
 
 
