@@ -2,7 +2,9 @@
 
 The goal of this project is to analyze how various genres of video games were affected differently and to study the correlation between different video game genres and the severity of lockdown during COVID-19. This will be achieved by analyzing the language used in different Wikipedia pages for each game, as well as examining mobility data in each country to estimate the severity of lockdown.
 
-Research Questions:
+In the wake of the COVID-19 pandemic, our project unveils a captivating narrative of how distinct video game genres navigated unprecedented challenges. By scrutinizing language patterns on Wikipedia pages and correlating them with mobility data, we reveal nuanced trends. We explore the reliability of English Wikipedia pages as a global barometer. This concise story not only illuminates the complex relationship between lockdown severity and gaming habits but also provides valuable insights for understanding the evolving dynamics of the video game industry in the face of global disruptions.
+
+### Research Questions:
 - Is there a consistent trend for the same genres of video games during the COVID-19 pandemic?
   - Investigate whether certain video game genres experienced similar patterns of popularity or decline during the pandemic.
   - Explore potential factors influencing these trends, such as changes in user preferences, gaming habits, or social dynamics.
@@ -15,33 +17,11 @@ Research Questions:
   - Assess the generalizability of findings from English Wikipedia pages to global trends, considering cultural and linguistic differences.
   - Explore whether language-specific Wikipedia pages provide consistent insights into the popularity or decline of video game genres, or if there are notable variations that need to be considered in the analysis.
 
+To enrich our insights and provide a nuanced understanding of the observed trends, we have judiciously incorporated additional datasets. These supplementary data sources are instrumental in elucidating the intricate relationship between external factors, such as the global pandemic, and the ebb and flow of interest in different video game titles. These include all the frequency at which Wikipedia pages for each video game in every language was accessed, especially during the COVID-19 pandemic.
 
-
-
-
-Compare games that are representative with the lockdown severity by looking at mobilities.
-A few similar games and look if they have the same trend with each other and with lockdown intensity
-Use english ones as a sort of average
-
-Extra dataset are the ones of the games if not included in the original
-
-
-
-
-
-
-
-Abstract: A 150 word description of the project idea and goals. What’s the motivation behind your project? What story would you like to tell, and why?
-
-Research Questions: A list of research questions you would like to address during the project.
-
-Proposed additional datasets (if any): List the additional dataset(s) you want to use (if any), and some ideas on how you expect to get, manage, process, and enrich it/them. Show us that you’ve read the docs and some examples, and that you have a clear idea on what to expect. Discuss data size and format if relevant. It is your responsibility to check that what you propose is feasible.
-
-
-Methods
-
-Proposed timeline
-
-Organization within the team: A list of internal milestones up until project Milestone P3.
-
-Questions for TAs (optional): Add here any questions you have for us related to the proposed project.
+### Internal milestones:
+- Choosing what video games are a good choice to represent a genre
+- Choosing what languages are good due to them being mostly spoken in only one country
+- Finding trends for each genre during the pandemic (english wikipedia)
+- Finding trends between the mobility dataset and each video game genre
+- Creating the story with the findings.
