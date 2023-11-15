@@ -1,4 +1,19 @@
-## How lockdown affects attention towards video game 
+## How Lockdown Affected Attention Towards Video Games
+
+The goal of this project is to analyze how various genres of video games were affected differently and to study the correlation between different video game genres and the severity of lockdown during COVID-19. This will be achieved by analyzing the language used in different Wikipedia pages for each game, as well as examining mobility data in each country to estimate the severity of lockdown.
+
+Research Questions:
+- Is there a consistent trend for the same genres of video games during the COVID-19 pandemic?
+  - Investigate whether certain video game genres experienced similar patterns of popularity or decline during the pandemic.
+  - Explore potential factors influencing these trends, such as changes in user preferences, gaming habits, or social dynamics.
+
+- What is the relationship between mobility patterns and the traffic of video game Wikipedia pages?
+  - Examine how variations in mobility data, reflecting the severity of lockdown measures, correspond to changes in the viewership of video game Wikipedia pages.
+  - Analyze whether increased or decreased mobility aligns with heightened interest in specific video game genres, indicating a potential connection between real-world restrictions and virtual entertainment.
+
+- To what extent can English Wikipedia pages serve as a reliable estimate of the average effect on video game popularity during the pandemic?
+  - Assess the generalizability of findings from English Wikipedia pages to global trends, considering cultural and linguistic differences.
+  - Explore whether language-specific Wikipedia pages provide consistent insights into the popularity or decline of video game genres, or if there are notable variations that need to be considered in the analysis.
 
 
 
@@ -9,23 +24,6 @@ A few similar games and look if they have the same trend with each other and wit
 Use english ones as a sort of average
 
 Extra dataset are the ones of the games if not included in the original
-
-The results (shift in attention) depends on the lockdown intensity, correlated in mobility decrease
-
-
-
-
-
-
-This project aims to show the relationship between mobility and the wikipedia pages frequented. The story 
-
-Research Questions:
-- How did wikipedia traffic change in each country (language of the pages accessed)
-- Is there a relationship between this change and the mobility
-
-
-
-
 
 
 
