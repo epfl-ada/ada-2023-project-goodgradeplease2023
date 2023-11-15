@@ -1,4 +1,20 @@
-## How is mobility linked to wikipedia usage
+## How lockdown affects attention towards video game 
+
+
+
+
+
+Compare games that are representative with the lockdown severity by looking at mobilities.
+A few similar games and look if they have the same trend with each other and with lockdown intensity
+Use english ones as a sort of average
+
+Extra dataset are the ones of the games if not included in the original
+
+The results (shift in attention) depends on the lockdown intensity, correlated in mobility decrease
+
+
+
+
 
 
 This project aims to show the relationship between mobility and the wikipedia pages frequented. The story 
@@ -6,6 +22,12 @@ This project aims to show the relationship between mobility and the wikipedia pa
 Research Questions:
 - How did wikipedia traffic change in each country (language of the pages accessed)
 - Is there a relationship between this change and the mobility
+
+
+
+
+
+
 
 
 
