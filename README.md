@@ -24,10 +24,10 @@ To enrich our insights and provide a nuanced understanding of the observed trend
 We will extend our analysis to more games and more languages, we will study different types of games (solo player, multiplayer, offline, online, campaign, battle royale, etc...) and find the ones with the highest growth of interest. To do this we will create a dataframe that will link each game to different topics (similar to the topics_linked.csv that is part of the coronawiki dataset). By doing that, we will extend our analysis for more languages and study the different types of games.
 
 Most of the data is useful and interesting even though there were some missing values that we found in the dataset for certain wikipedia pages. This is all shown in the notebook. Some interesting findings that have already been done are:
-- Not only did the use of wikipedia rise, but video game related pages rose more:
-![Screenshot](pic_1.png)
+- Not only did the use of wikipedia rise, but video game related pages rose more (here is the minecraft data for example):
+![Screenshot](minecraft.png)
 - The countries showed different trends which can be split into three categories:
-
+![Screenshot](pic_1.png)
 
 
 
