@@ -2,9 +2,9 @@
 
 ## Abstract:
 
-The goal of this project is to analyze how various genres of video games were affected differently and to study the correlation between the interest in different video game genres and the severity of lockdown during COVID-19. This will be achieved by analyzing the language used in different Wikipedia pages for each game, as well as examining mobility data in each country to estimate the severity of lockdown.
+During the COVID-19 lockdown, people had to find other ways to keep occupied, creating a rise in video game popularity. This project aims to analyze the correlation between the severity of the lockdown with the rise and fall of various video game genres. This will be down by analyzing the language used in different Wikipedia pages for each game, as well as examining mobility data in each country to estimate the severity of lockdown.
 
-In the wake of the COVID-19 pandemic, our project unveils a captivating narrative of how distinct video game genres navigated unprecedented challenges. By scrutinizing language patterns on Wikipedia pages and correlating them with mobility data, we reveal nuanced trends. We explore the reliability of English Wikipedia pages as a global barometer. This concise story not only illuminates the complex relationship between lockdown severity and gaming habits but also provides valuable insights for understanding the evolving dynamics of the video game industry in the face of global disruptions (and the loneliness of people).
+Our project tells a fascinating story about how different types of video games faced tough challenges. We looked at the language of Wikipedia pages and connected them with data about that country's mobility change during the pandemic (for the languages that are mainly spoken in only one country). This helps us see interesting trends. Furthermore, English Wikipedia can show us what's happening worldwide as it is the most worldwide language. In a nutshell, our story shows how strict lockdowns relate to changes what video game genres people tend to play more of. It also gives us useful information about how the video game industry is changing during global disruptions and if it had a lasting effect on various genres' popularity.
 
 ### Research Questions:
 - Is there a consistent trend for the same genres of video games during the COVID-19 pandemic?
@@ -20,20 +20,25 @@ In the wake of the COVID-19 pandemic, our project unveils a captivating narrativ
   - Explore whether language-specific Wikipedia pages provide consistent insights into the popularity or decline of video game genres, or if there are notable variations that need to be considered in the analysis.
 
 - How did the popularity change in board games compare to online games during the pandemic?
+  - Is there a trend between countries that tend to have larger families with the popularity of board games in that country (Ones that have rules that can be looked up on Wikipedia).
 
 ## Additional Datasets and Methods:
 
-To enrich our insights and provide a nuanced understanding of the observed trends, we have judiciously incorporated additional datasets. These supplementary data sources are instrumental in elucidating the intricate relationship between external factors, such as the global pandemic, and the ebb and flow of interest in different video game titles. These include all the frequency at which Wikipedia pages for each video game in every language was accessed, especially during the COVID-19 pandemic.
+To enrich our understanding, we have included additional datasets. These supplementary data sources are instrumental in examining the interesting relationship between external factors, such as the global pandemic, and the interest in different video game genres. These include all the frequencies at which Wikipedia pages for each video game in every language was accessed, especially during the COVID-19 pandemic. After having done some preprocessing and inital analysis on the dataset, we found that most of the data is useful and interesting. Although there were some missing values that we found in the dataset for certain wikipedia pages. This is all shown in the notebook. Some interesting findings that have already been done are:
+- The decrease in mobility for each country that can be linked to difference in popularity of different video game genres:
+![Screenshot]()
 
-We will extend our analysis to more games and more languages, we will study different types of games (solo player, multiplayer, offline, online, campaign, battle royale, etc...) and find the ones with the highest growth of interest. To do this we will create a dataframe that will link each game to different topics (similar to the topics_linked.csv that is part of the coronawiki dataset).
-
-Most of the data is useful and interesting even though there were some missing values that we found in the dataset for certain wikipedia pages. This is all shown in the notebook. Some interesting findings that have already been done are:
 - Not only did the use of wikipedia rise, but video game related pages rose more (here is the minecraft data for example):
 ![Screenshot](minecraft.png)
+We can see that the predicted frequency at which the minecraft wikipedia would be accessed was exceeded (the frequency is calculated as a percentage compared to the usage of wikipedia)
+
 - The countries showed different trends which can be split into three categories:
 ![Screenshot](pic_1.png)
 
-This shows that there are promising trends between the pandemic and video games, further analysis is needed, as detailed by these milestones:
+We will extend our analysis to more games and more languages, we will study different types of games (solo player, multiplayer, offline, online, campaign, battle royale, etc...) and find the ones with the highest growth of interest. To do this we will create a dataframe that will link each game to different topics (similar to the topics_linked.csv that is part of the coronawiki dataset).
+
+All this already shows that there are very promising trends between the pandemic and video games, further analysis is needed, as detailed by these milestones:
+
 ### Internal milestones:
 - Adressing the missing values that some countries have for their wikipedia traffic
 - Choosing which video games are a good choice to represent a genre
