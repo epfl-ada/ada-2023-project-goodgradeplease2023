@@ -17,7 +17,13 @@ In the wake of the COVID-19 pandemic, our project unveils a captivating narrativ
   - Assess the generalizability of findings from English Wikipedia pages to global trends, considering cultural and linguistic differences.
   - Explore whether language-specific Wikipedia pages provide consistent insights into the popularity or decline of video game genres, or if there are notable variations that need to be considered in the analysis.
 
+- How did the popularity change in board games compare to online games during the pandemic?
+
 To enrich our insights and provide a nuanced understanding of the observed trends, we have judiciously incorporated additional datasets. These supplementary data sources are instrumental in elucidating the intricate relationship between external factors, such as the global pandemic, and the ebb and flow of interest in different video game titles. These include all the frequency at which Wikipedia pages for each video game in every language was accessed, especially during the COVID-19 pandemic.
+
+We will extend our analysis to more games and more languages, we will study different types of games (solo player, multiplayer, offline, online, campaign, battle royale, etc...) and find the ones with the highest growth of interest. To do this we will create a dataframe that will link each game to different topics (similar to the topics_linked.csv that is part of the coronawiki dataset). By doing that, we will extend our analysis for more languages and study the different types of games.
+
+Causal analysis to be confident in saying that the interest for video games increased during the pandemic/lockdown and that the growth of the interest for the related wikipedia pages is not only due to the global growth of interest for wikipedia (Yichen's work).
 
 ### Internal milestones:
 - Choosing what video games are a good choice to represent a genre
@@ -25,11 +31,4 @@ To enrich our insights and provide a nuanced understanding of the observed trend
 - Finding trends for each genre during the pandemic (english wikipedia)
 - Finding trends between the mobility dataset and each video game genre
 - Creating the story with the findings.
-
-Parler des board games, peut etre que les jeux ou on peut trouver les regles auront plus de vue que d'habitudes
-
-Causal analysis to be confident in saying that the interest for video games increased during the pandemic/lockdown and that the growth of the interest for the related wikipedia pages is not only due to the global growth of interest for wikipedia (Yichen's work).
-
-We will extend our analysis to more games and more languages, we will study different types of games (solo player, multiplayer, offline, online, campaign, battle royale...) and find the ones with the highest growth of interest. To do this we will create a dataframe that will link each game to different topics (similar to the topics_linked.csv that is part of the coronawiki dataset). By doing that, we will extend our analysis for more languages and study the different types of games.
-
-Create the website for the datastory...
+- Create the website for the datastory.
