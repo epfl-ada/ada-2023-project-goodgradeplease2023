@@ -1,8 +1,8 @@
 ## How Lockdown Affected Attention Towards Video Games
 
-The goal of this project is to analyze how various genres of video games were affected differently and to study the correlation between different video game genres and the severity of lockdown during COVID-19. This will be achieved by analyzing the language used in different Wikipedia pages for each game, as well as examining mobility data in each country to estimate the severity of lockdown.
+The goal of this project is to analyze how various genres of video games were affected differently and to study the correlation between the interest in different video game genres and the severity of lockdown during COVID-19. This will be achieved by analyzing the language used in different Wikipedia pages for each game, as well as examining mobility data in each country to estimate the severity of lockdown.
 
-In the wake of the COVID-19 pandemic, our project unveils a captivating narrative of how distinct video game genres navigated unprecedented challenges. By scrutinizing language patterns on Wikipedia pages and correlating them with mobility data, we reveal nuanced trends. We explore the reliability of English Wikipedia pages as a global barometer. This concise story not only illuminates the complex relationship between lockdown severity and gaming habits but also provides valuable insights for understanding the evolving dynamics of the video game industry in the face of global disruptions.
+In the wake of the COVID-19 pandemic, our project unveils a captivating narrative of how distinct video game genres navigated unprecedented challenges. By scrutinizing language patterns on Wikipedia pages and correlating them with mobility data, we reveal nuanced trends. We explore the reliability of English Wikipedia pages as a global barometer. This concise story not only illuminates the complex relationship between lockdown severity and gaming habits but also provides valuable insights for understanding the evolving dynamics of the video game industry in the face of global disruptions (and the loneliness of people).
 
 ### Research Questions:
 - Is there a consistent trend for the same genres of video games during the COVID-19 pandemic?
@@ -25,3 +25,11 @@ To enrich our insights and provide a nuanced understanding of the observed trend
 - Finding trends for each genre during the pandemic (english wikipedia)
 - Finding trends between the mobility dataset and each video game genre
 - Creating the story with the findings.
+
+Parler des board games, peut etre que les jeux ou on peut trouver les regles auront plus de vue que d'habitudes
+
+Causal analysis to be confident in saying that the interest for video games increased during the pandemic/lockdown and that the growth of the interest for the related wikipedia pages is not only due to the global growth of interest for wikipedia (Yichen's work).
+
+We will extend our analysis to more games and more languages, we will study different types of games (solo player, multiplayer, offline, online, campaign, battle royale...) and find the ones with the highest growth of interest. To do this we will create a dataframe that will link each game to different topics (similar to the topics_linked.csv that is part of the coronawiki dataset). By doing that, we will extend our analysis for more languages and study the different types of games.
+
+Create the website for the datastory...
