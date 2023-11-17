@@ -66,7 +66,7 @@ All this already shows that there are very promising trends between the pandemic
 | Student | Task |
 | -------- | -------- |
 | Kyan Achtari | Creating the data story. Choosing representative video games and languages. Answering Question 3.1 & 3.2 |
-| Mehdi Abdallah | Creating the data story. Finding trends. Answering Questions 1.1 & 1.2 |
+| Mehdi Abdallahi | Creating the data story. Finding trends. Answering Questions 1.1 & 1.2 |
 | Corentin Plumet | Creating the data story. Adressing the missing values. Answering Question 2.1 |
 | Zhuofu Zhou | Creating the website. Cleaning and commenting the code. Answering Question 2.2|
 | Yichen Liu | Creating the webstie. Cleaning and commenting the code. Answering Question 4.1 |
