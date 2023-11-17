@@ -1,4 +1,4 @@
-## How Lockdown Affected Attention Towards Video Games
+# How Lockdown Affected Attention Towards Video Games
 
 The goal of this project is to analyze how various genres of video games were affected differently and to study the correlation between the interest in different video game genres and the severity of lockdown during COVID-19. This will be achieved by analyzing the language used in different Wikipedia pages for each game, as well as examining mobility data in each country to estimate the severity of lockdown.
 
