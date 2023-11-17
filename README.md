@@ -35,6 +35,7 @@ We can see that the predicted frequency at which the minecraft wikipedia would b
 This shows that we can easily group countries by their COVID-19 lockdown restrictiveness in order to analyse if they show consistent trends with regard to each video game genre's popularity shift.
 
 - Furthermore another interesting idea that could be useful to explain one game's popularity change compared to another is what region the game is based on in the world:
+
 ![Screenshot](Distribution.png)
 
 We will extend our analysis to more games and more languages, we will study different types of games (solo player, multiplayer, offline, online, campaign, battle royale, etc...) and find the ones with the highest growth of interest. To do this we will create a dataframe that will link each game to different topics (similar to the topics_linked.csv that is part of the coronawiki dataset).
