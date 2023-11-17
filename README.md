@@ -26,7 +26,7 @@ Our project tells a fascinating story about how different types of video games f
 
 To enrich our understanding, we have included additional datasets. These supplementary data sources are instrumental in examining the interesting relationship between external factors, such as the global pandemic, and the interest in different video game genres. These include all the frequencies at which Wikipedia pages for each video game in every language was accessed, especially during the COVID-19 pandemic. After having done some preprocessing and inital analysis on the dataset, we found that most of the data is useful and interesting. Although there were some missing values that we found in the dataset for certain wikipedia pages. This is all shown in the notebook. Some interesting findings that have already been done are:
 - The decrease in mobility for each country that can be linked to difference in popularity of different video game genres:
-![Screenshot]()
+![Screenshot](mobility.png)
 
 - Not only did the use of wikipedia rise, but video game related pages rose more (here is the minecraft data for example):
 ![Screenshot](minecraft.png)
