@@ -2,13 +2,13 @@
 
 ## Abstract:
 
-During the COVID-19 lockdown, people had to find other ways to keep occupied, creating a rise in video game popularity. This project aims to analyze the correlation between the severity of the lockdown with the rise and fall of various video game genres. This will be down by analyzing the language used in different Wikipedia pages for each game, as well as examining mobility data in each country to estimate the severity of lockdown.
+During the COVID-19 lockdown, people had to find other ways to keep themselves occupied, creating a rise in video game popularity. This project aims to analyze the correlation between the severity of the lockdown with the rise and fall of various video game genres. This will be done by analyzing the language used in different Wikipedia pages for each game, as well as examining the mobility data in each country to estimate the severity of lockdown.
 
-Our project tells a fascinating story about how different types of video games faced tough challenges. We looked at the language of Wikipedia pages and connected them with data about that country's mobility change during the pandemic (for the languages that are mainly spoken in only one country). This helps us see interesting trends. Furthermore, English Wikipedia can show us what's happening worldwide as it is the most worldwide language. In a nutshell, our story shows how strict lockdowns relate to changes what video game genres people tend to play more of. It also gives us useful information about how the video game industry is changing during global disruptions and if it had a lasting effect on various genres' popularity.
+Our project tells a fascinating story about how different types of video games faced tough challenges. We looked at the language of Wikipedia pages and connected them with data about that country's mobility change during the pandemic (for the languages that are mainly spoken in only one country). This helps us see interesting trends. Furthermore, English Wikipedia can show us what's happening worldwide as it is the most used worldwide language. In a nutshell, our story shows how strict lockdowns relate to changes what video game genres people tend to play more of. It also gives us useful information about how the video game industry is changing during global disruptions and if it had a lasting effect on various genres' popularity. This can be useful information for game developers when choosing what game genre to choose, and what target audience to make it for.
 
 ### Research Questions:
 - Is there a consistent trend for the same genres of video games during the COVID-19 pandemic?
-  - Investigate whether certain video game genres experienced similar patterns of popularity or decline during the pandemic.
+  - Investigate whether certain video game genres experienced similar patterns of rise in popularity or decline during the pandemic.
   - Explore potential factors influencing these trends, such as changes in user preferences, gaming habits, or social dynamics.
 
 - What is the relationship between mobility patterns and the traffic of video game Wikipedia pages?
