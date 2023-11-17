@@ -45,8 +45,9 @@ All this already shows that there are very promising trends between the pandemic
   - Choosing what languages are good due to them being mostly spoken in only one country.
 - Done for 01/12:
   - Finding trends for each genre during the pandemic using the english wikipedia as it's an "average" since most countries speak at least some english.
-- Done for 08/12:
   - Finding trends between the mobility dataset and each video game genre.
+- Done for 08/12:
+- Finish answering all research questions
 - Done for 15/12:
   - Cleaning and commenting the code.
   - Creating the story with the findings.
