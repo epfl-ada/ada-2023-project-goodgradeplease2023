@@ -39,10 +39,16 @@ We will extend our analysis to more games and more languages, we will study diff
 All this already shows that there are very promising trends between the pandemic and video games, further analysis is needed, as detailed by these milestones:
 
 ### Internal milestones:
-- Adressing the missing values that some countries have for their wikipedia traffic
-- Choosing which video games are a good choice to represent a genre
-- Choosing what languages are good due to them being mostly spoken in only one country
-- Finding trends for each genre during the pandemic using the english wikipedia as it's an "average" since most countries speak at least some english
-- Finding trends between the mobility dataset and each video game genre
-- Creating the story with the findings.
-- Creating the website for the datastory.
+- Done for 19/11:
+  - Adressing the missing values that some countries have for their wikipedia traffic.
+  - Choosing which video games are a good choice to represent a genre.
+  - Choosing what languages are good due to them being mostly spoken in only one country.
+- Done for 01/12:
+  - Finding trends for each genre during the pandemic using the english wikipedia as it's an "average" since most countries speak at least some english.
+- Done for 08/12:
+  - Finding trends between the mobility dataset and each video game genre.
+- Done for 15/12:
+  - Cleaning and commenting the code.
+  - Creating the story with the findings.
+- Done for 22/12: 
+  - Creating the website for the datastory.
