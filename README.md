@@ -53,3 +53,11 @@ All this already shows that there are very promising trends between the pandemic
   - Creating the story with the findings.
 - Done for 22/12: 
   - Creating the website for the datastory.
+
+| Student | Task |
+| -------- | -------- |
+| Kyan Achtari | Choosing representative video games and languages. Answering Question 3.1 & 3.2 |
+| Mehdi Abdallah | Finding trends. Answering Questions 1.1 & 1.2 |
+| Corentin Plumet | Adressing the missing values. Answering Question 2.1 |
+| Zhuofu Zhou | Answering Question 2.2 |
+| Yichen Liu | Answering Question 4.1 |
