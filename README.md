@@ -25,15 +25,14 @@ Our project tells a fascinating story about how different types of video games f
 ## Additional Datasets and Methods:
 
 To enrich our understanding, we have included additional datasets. These supplementary data sources are instrumental in examining the interesting relationship between external factors, such as the global pandemic, and the interest in different video game genres. These include all the frequencies at which Wikipedia pages for each video game in every language was accessed, especially during the COVID-19 pandemic. After having done some preprocessing and inital analysis on the dataset, we found that most of the data is useful and interesting. Although there were some missing values that we found in the dataset for certain wikipedia pages. This is all shown in the notebook. Some interesting findings that have already been done are:
-- The decrease in mobility for each country that can be linked to difference in popularity of different video game genres:
-![Screenshot]()
 
 - Not only did the use of wikipedia rise, but video game related pages rose more (here is the minecraft data for example):
 ![Screenshot](minecraft.png)
 We can see that the predicted frequency at which the minecraft wikipedia would be accessed was exceeded (the frequency is calculated as a percentage compared to the usage of wikipedia)
 
-- The countries showed different trends which can be split into three categories:
+- The countries showed different trends with regard to their mobilities, which can be split into three categories as shown below:
 ![Screenshot](pic_1.png)
+This shows that we can easily group countries by their COVID-19 lockdown restrictiveness in order to analyse if they show consistent trends with regard to each video game genre's popularity shift.
 
 We will extend our analysis to more games and more languages, we will study different types of games (solo player, multiplayer, offline, online, campaign, battle royale, etc...) and find the ones with the highest growth of interest. To do this we will create a dataframe that will link each game to different topics (similar to the topics_linked.csv that is part of the coronawiki dataset).
 
