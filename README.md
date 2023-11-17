@@ -25,7 +25,7 @@ We will extend our analysis to more games and more languages, we will study diff
 
 Most of the data is useful and interesting even though there were some missing values that we found in the dataset for certain wikipedia pages. This is all shown in the notebook. Some interesting findings that have already been done are:
 - Not only did the use of wikipedia rise, but video game related pages rose more:
-
+![Screenshot](./pic_1.png)
 - The countries showed different trends which can be split into three categories:
 
 
