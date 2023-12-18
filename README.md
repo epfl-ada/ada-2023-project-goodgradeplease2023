@@ -28,18 +28,18 @@ To enrich our understanding, we have included additional datasets. These supplem
 
 - Not only did the use of wikipedia rise, but video game related pages rose more (here is the minecraft data for example):
 
-![Screenshot](minecraft.png)
+![Screenshot](Images/minecraft.png)
 We can see that the predicted frequency at which the minecraft wikipedia would be accessed was exceeded (the frequency is calculated as a percentage compared to the usage of wikipedia)
 
 - The countries showed different trends with regard to their mobilities, which can be split into three categories as shown below:
 
-![Screenshot](pic_1.png)
+![Screenshot](Images/pic_1.png)
 
 This shows that we can easily group countries by their COVID-19 lockdown restrictiveness in order to analyse if they show consistent trends with regard to each video game genre's popularity shift.
 
 - Furthermore another interesting idea that could be useful to explain one game's popularity change compared to another is what region the game is based on in the world:
 
-![Screenshot](Distribution.png)
+![Screenshot](Images/Distribution.png)
 
 This shows which continents had a video game based on them, but we can dive deeper, such as (Northern, Eastern, Southern, and Western Europe).
 
