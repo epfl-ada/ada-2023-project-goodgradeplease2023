@@ -53,11 +53,23 @@ Unsurprisingly, the lockdown in Great Britain is not representative of the avera
 
 ![Branching](Website_Images/En_vs_All_mobility.png)
 
-At first glance, the english wikipedia pages do not seem to be a reliable estimate of the average video game popularity of all countries as it has very often the highest or lowest value. However when we scale down the english page views (two and a half times) we end up with the orange curve which is extremely similar to the average. This shows that english wikipedia pages (when tones down) are quite reliable when trying to estimate the global average.
+At first glance, the english wikipedia pages do not seem to be a reliable estimate of the average video game popularity of all countries as it has very often the highest or lowest value. However when we scale down the english page views (two and a half times) we end up with the orange curve which is extremely similar to the average. This shows that english wikipedia pages (when toned down) are quite reliable when trying to estimate the global average.
 
-![Branching](Website_Images/Percent_pageviews.png)
+![Branching](Website_Images/percent_pageviews_normalized.png)
 
+Obviously the COVID-19 lockdown increased the page views related to video games, but we can also see below that video games increased more relatively to other pages during the COVID-19 lockdown. Unfortunately we cannot see the longer lasting effect that COVID-19 had on the pageviews a few years after the lockdown due to the lack of data.
 
+![Branching](Website_Images/percent_pageviews.png)
+
+Furthermore, when we compare the trends individually, we can still match the english to be the average, no matter how restrictive the lockdown was. However it matches the semi_restrictive the best with a reduction of 2.5, while the reduction had to be adjusted for the restrictive and unrestrictive to 2.
+
+![Branching](Website_Images/Restrictive_2.png)
+![Branching](Website_Images/Semi_25.png)
+![Branching](Website_Images/Unrestrictive_2.png)
+
+This could be due to the fact that england had a semi-restrictive lockdown. But it can still represent the others' averages as many countries use enlish other than england.
+
+![Branching](Website_Images/Triple_mobility.png)
 
 
 # Bon j'ai changé ce que je veux dire jsp si ca peut etre utile ca dcp je laisse
