@@ -49,11 +49,21 @@ We can see that after the beginning of the lockdown it seems that certain countr
 
 # To what extent can English Wikipedia pages serve as a reliable estimate of the average video game popularity?
 
-Unsurprisingly, the lockdown in Great Britain is not representative of the average mobility as can be seen below:
+Unsurprisingly, the lockdown in Great Britain is not representative of the average mobility as can be seen below. This is to be expected as the lockdowns were decided by every country individually and had nothing to do with their language.
 
 ![Branching](Website_Images/En_vs_All_mobility.png)
 
-However pageviews is not too bad:
+At first glance, the english wikipedia pages do not seem to be a reliable estimate of the average video game popularity of all countries as it has very often the highest or lowest value. However when we scale down the english page views (two and a half times) we end up with the orange curve which is extremely similar to the average. This shows that english wikipedia pages (when tones down) are quite reliable when trying to estimate the global average.
+
+![Branching](Website_Images/Percent_pageviews.png)
+
+
+
+
+# Bon j'ai changé ce que je veux dire jsp si ca peut etre utile ca dcp je laisse
+
+
+However when we compare the english pageviews to the average pageviews, it is a lot more similar. The major difference being towards the end when it keeps on increasing compared to the others. Often gamers play in English, while people who play more casually play in their mothertongues. This could explain the dropoff when the mobility returns to normal for other countries and why english wikipedia searches kept increasing even when mobility was returning to normal. Casual players preffered to go and do other activities when mobility rose back up, while gamers kept on playing as they could work from home, even when mobility was increasing.
 
 ![Branching](Website_Images/En_vs_All_pageviews.png)
 
@@ -61,6 +71,16 @@ Now we check compared to each lockdown type:
 
 ![Branching](Website_Images/pageviews_cluster.png)
 
+Here we can see the restrictive lockdowns:
+
 ![Branching](Website_Images/Restrictive.png)
+
+Semi-restrictive lockdowns:
+
 ![Branching](Website_Images/Semi_Restrictive.png)
+
+Unrestrictive lockdowns:
+
 ![Branching](Website_Images/Unrestrictive.png)
+
+Here we can clearly see that post COVID-19, the restrictive lockdowns are the most similar to england as the mobility. This is beacuse more gamers had time to play, increasing the enlish wikipedia gaming pages similarily to a restrictive lockdown, when more people had time to play. However after COVID-19, we can see that the english wikipedia gaming pages differed a lot to the ones of an unresrtictive lockdown as they were the fastest to stop working from home.
