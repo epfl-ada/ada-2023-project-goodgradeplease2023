@@ -5,7 +5,7 @@ First, to be able to analyze the relationship between mobility and attention tow
 \n
 The plot below present the average mobility between the 2020-02-15 and the 2020-08-25	for France, Denmark, Germany, Italy, Netehrlands, Norway, Serbia, Sweden, South Korea, Catalonia (Barcelona), Finland and Japan. We also have differents line that present important dates of this period.   
 
-![Branching](mobility_pattern.png)
+![Branching](Website_Images/mobility_pattern.png)
 
 Thus, we can see that for most of the country, the start of the lockdown was really break in the mobility pattern. Indeed, if we take France as an exmaple, the mobility decreased by around 70% after the beginning of the lockdown. However, some countries like Japan the decrease is less likely noticeable.
 
@@ -16,11 +16,11 @@ Therefore, if we want to see if the mobility change has an impact on the attenti
 
 The signal of the mobility patterns is very noisy and to be able to grouped them into different cluster we can first smooth the curves by using a polynomial approximation.
 
-![Branching](mobility_pattern_smoothed.png)
+![Branching](Website_Images/mobility_pattern_smoothed.png)
 
 Thanks to these new smoothed curves, we can group the countries into 3 different categories of lockdown intensity: very restrictive, restrictive and unrestrictive.
 
-![Branching](countries_cluster.png)
+![Branching](Website_Images/countries_cluster.png)
 
 We can see that there are 3 clear tendancies with very similar pattern. We have that France, Italy, Serbia and Catalonia (Barcelona) have had a huge decrease in mobility.
 
@@ -34,8 +34,8 @@ The countries with which we chose to do the analysis speak a language that is ma
 
 The following figure shows therefore the percentage of wikipedia pageviews related to video games in the same countries we have in the mobility part.
 
-![Branching](pageviews.png)
+![Branching](Website_Images/pageviews.png)
 
 We can see that after the beginning of the lockdown it seems that certain countries experienced a rise in the attention toward video games. To have a better understanding of these curves, we can group them following the clustering we did previously in the mobility context.
 
-![Branching](pageviews_cluster.png)
+![Branching](Website_Images/pageviews_cluster.png)
