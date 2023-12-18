@@ -51,7 +51,7 @@ We can see that after the beginning of the lockdown it seems that certain countr
 
 Unsurprisingly, the lockdown in Great Britain is not representative of the average mobility as can be seen below:
 
-![Branching](Website_Images/En_vs_All_Mobility.png)
+![Branching](Website_Images/En_vs_All_mobility.png)
 
 However pageviews is not too bad:
 
