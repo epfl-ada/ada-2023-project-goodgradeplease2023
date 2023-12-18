@@ -49,3 +49,18 @@ We can see that after the beginning of the lockdown it seems that certain countr
 
 # To what extent can English Wikipedia pages serve as a reliable estimate of the average video game popularity?
 
+Unsurprisingly, the lockdown in Great Britain is not representative of the average mobility as can be seen below:
+
+![Branching](Website_Images/En_vs_All_Mobility.png)
+
+However pageviews is not too bad:
+
+![Branching](Website_Images/En_vs_All_pageviews.png)
+
+Now we check compared to each lockdown type:
+
+![Branching](Website_Images/pageviews_cluster.png)
+
+![Branching](Website_Images/Restrictive.png)
+![Branching](Website_Images/Semi_Restrictive.png)
+![Branching](Website_Images/Unrestrictive.png)
