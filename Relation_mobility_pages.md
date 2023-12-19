@@ -70,29 +70,3 @@ Furthermore, when we compare the trends individually, we can still match the eng
 This could be due to the fact that england had a semi-restrictive lockdown. But it can still represent the others' averages as many countries use enlish other than england.
 
 ![Branching](Website_Images/triple_mobility.png)
-
-
-# Bon j'ai changé ce que je veux dire jsp si ca peut etre utile ca dcp je laisse
-
-
-However when we compare the english pageviews to the average pageviews, it is a lot more similar. The major difference being towards the end when it keeps on increasing compared to the others. Often gamers play in English, while people who play more casually play in their mothertongues. This could explain the dropoff when the mobility returns to normal for other countries and why english wikipedia searches kept increasing even when mobility was returning to normal. Casual players preffered to go and do other activities when mobility rose back up, while gamers kept on playing as they could work from home, even when mobility was increasing.
-
-![Branching](Website_Images/En_vs_All_pageviews.png)
-
-Now we check compared to each lockdown type:
-
-![Branching](Website_Images/pageviews_cluster.png)
-
-Here we can see the restrictive lockdowns:
-
-![Branching](Website_Images/Restrictive.png)
-
-Semi-restrictive lockdowns:
-
-![Branching](Website_Images/Semi_Restrictive.png)
-
-Unrestrictive lockdowns:
-
-![Branching](Website_Images/Unrestrictive.png)
-
-Here we can clearly see that post COVID-19, the restrictive lockdowns are the most similar to england as the mobility. This is beacuse more gamers had time to play, increasing the enlish wikipedia gaming pages similarily to a restrictive lockdown, when more people had time to play. However after COVID-19, we can see that the english wikipedia gaming pages differed a lot to the ones of an unresrtictive lockdown as they were the fastest to stop working from home.
