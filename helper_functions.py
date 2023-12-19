@@ -58,7 +58,7 @@ def choose_restrictiveness(choice, english):
             'Serbia': ['sr', 'RS'],
             'Catalonia': ['ca', 'ES'],
             }
-    if choice == "Semi-restrictive":
+    if choice == "Semi-Restrictive":
         data = {
             'Denmark': ['da', 'DK'],
             'Germany': ['de', 'DE'],
@@ -80,7 +80,7 @@ def choose_restrictiveness(choice, english):
     df_code.rename(columns = {0:'lang', 1:'state'}, inplace = True)
     return data, df_code
 
-def function1(d, df_code, interventions):
+def plot_percent_pageviews(d, df_code, interventions):
     fig, ax = plt.subplots(figsize=(20, 20))
     all_lines = []
     max_length = 0  # Track the maximum length of y_fit arrays
@@ -155,7 +155,7 @@ def function1(d, df_code, interventions):
     plt.show()
     return
 
-def function2(d, df_code, interventions, reduction):
+def plot_normalized_percent_pageviews(d, df_code, interventions, reduction):
     fig, ax = plt.subplots(figsize=(20, 20))
     all_lines = []
     max_length = 0  # Track the maximum length of y_fit arrays
@@ -255,7 +255,7 @@ def function2(d, df_code, interventions, reduction):
     plt.show()
     return
 
-def function3(d, df_code, interventions):
+def plot_mobility(d, df_code, interventions):
     fig, axs = plt.subplots(3, 1, sharex = True, sharey = True, figsize=(6,8))
 
     for i, c in enumerate(df_code['lang']):
