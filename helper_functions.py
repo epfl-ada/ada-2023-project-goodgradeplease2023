@@ -4,7 +4,7 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-%matplotlib inline
+#%matplotlib inline
 import seaborn as sns
 import math
 from scipy.signal import savgol_filter
@@ -81,7 +81,7 @@ def choose_restrictiveness(choice, english):
     return data, df_code
 
 
-def function1(df_code, interventions):
+def function1(d, df_code, interventions):
     fig, ax = plt.subplots(figsize=(20, 20))
     all_lines = []
     max_length = 0  # Track the maximum length of y_fit arrays
