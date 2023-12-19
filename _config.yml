@@ -7,4 +7,5 @@ navigation:
     url: Relation_mobility_pages
   - title: Example
     url: example
-  
+  - title: English
+    url: English_average
