@@ -36,7 +36,7 @@ def load_aggregated_timeseries():
         # Load the JSON data
         d = json.load(f)
     return d
-    
+
 def choose_restrictiveness(choice, english):
     if choice == "All":
         data = {
@@ -81,6 +81,87 @@ def choose_restrictiveness(choice, english):
     df_code = df_code.transpose()
     df_code.rename(columns = {0:'lang', 1:'state'}, inplace = True)
     return data, df_code
+
+def average_mobility(d, df_code, interventions, globalmob):
+    # Create subplot
+    fig = make_subplots(rows=1, cols=1, subplot_titles=['Mobility'], vertical_spacing=0.1)
+
+    # Initialize a list to store individual mobility lines
+    all_lines = []
+
+    for i, c in enumerate(df_code['lang']):
+        cs = df_code.iloc[i]['state']
+
+        if cs == 'KR':
+            globalmob_ko = globalmob[(globalmob['country_region_code'] == cs) & (globalmob['sub_region_1'].isnull()) & (globalmob['metro_area'].isnull())]
+        else:
+            if cs == 'RS':
+                globalmob_sr = globalmob[(globalmob['country_region_code'] == cs) & (globalmob['metro_area'].isnull())]
+            else:
+                if cs == 'ES':
+                    globalmob_ca = globalmob[(globalmob['country_region_code'] == 'ES') & (globalmob['sub_region_1'] == 'Catalonia') & (globalmob['sub_region_2'].isnull())].copy()
+                else:
+                    globalmob_g = globalmob[(globalmob['country_region_code'] == cs) & (globalmob['sub_region_1'].isnull())].copy()
+                    globalmob_g.reset_index(inplace=True, drop=True)
+
+        df = globalmob_g.copy(deep=True)
+
+        mobility_g = interventions.loc[c]['Mobility']
+        lockdown_g = interventions.loc[c]['Lockdown']
+        normalcy_g = interventions.loc[c]['Normalcy']
+
+        columns = globalmob.columns[8:]
+        df = df.drop(['residential_percent_change_from_baseline', 'parks_percent_change_from_baseline'], axis=1)
+        columns = columns.drop(['residential_percent_change_from_baseline', 'parks_percent_change_from_baseline'])
+
+        mean_g = df[columns].mean(axis=1)
+
+        # Light grey lines for individual countries
+        for column in columns:
+            fig.add_trace(go.Scatter(x=df['date'], y=df[column], mode='lines', line=dict(color='lightgrey', width=1.5), showlegend=False, opacity=0.25))
+        
+        # Vertical lines
+        if cs =='GB':
+            fig.add_trace(go.Scatter(x=[lockdown_g, lockdown_g], y=[-100, 100], mode='lines', line=dict(color='black', width=1.5), name=f'Lockdown', showlegend=True))
+            fig.add_trace(go.Scatter(x=[normalcy_g, normalcy_g], y=[-100, 100], mode='lines', line=dict(color='black', width=1.5, dash='dash'), name=f'Normalcy', showlegend=True))
+        else:
+            fig.add_trace(go.Scatter(x=[lockdown_g, lockdown_g], y=[-100, 100], mode='lines', line=dict(color='black', width=1.5), name=f'Lockdown {c}', showlegend=False))
+            fig.add_trace(go.Scatter(x=[normalcy_g, normalcy_g], y=[-100, 100], mode='lines', line=dict(color='black', width=1.5, dash='dash'), name=f'Normalcy {c}', showlegend=False))
+
+        # Plot individual lines
+        if cs == 'GB':
+            line_label = f'Average Mobility in {df_code.index[i]}'
+            line_color = 'red'
+            line_width = 4
+            fig.add_trace(go.Scatter(x=df['date'], y=mean_g, mode='lines', name=line_label, line=dict(color=line_color, width=line_width), showlegend=True))
+        else:
+            line_label = '_nolegend_'
+            line_color = 'grey'
+            line_width = 1.5
+            fig.add_trace(go.Scatter(x=df['date'], y=mean_g, mode='lines', name=line_label, line=dict(color=line_color, width=line_width), showlegend=False, opacity=0.5))
+
+        # Add individual lines to the list
+        all_lines.append(mean_g)
+        
+    # Calculate the average line for all countries
+    average_line = np.mean(all_lines, axis=0)
+
+    # Plot the average line as a thick blue line
+    fig.add_trace(go.Scatter(x=df['date'], y=average_line, mode='lines', name='Average Mobility (All Countries)', line=dict(color='blue', width=4)))
+
+    # Customize layout
+    fig.update_layout(
+        title='Comparing Normalized Percentage of Wikipedia page views related to video games to English',
+        xaxis=dict(title='Date'),
+        yaxis=dict(title='Percentage of Mobility Compared to Day 0'),
+        legend=dict(x=1.02, y=1),
+        showlegend=True,
+        height=600,
+        width=900,
+    )
+
+    fig.show()
+    return
 
 def plot_percent_pageviews(d, df_code, interventions):
     fig = make_subplots(rows=1, cols=1, subplot_titles=['Percentage of Wikipedia page views related to video games'])

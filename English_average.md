@@ -7,9 +7,16 @@ We will tell a fascinating story about how different types of video games faced 
 We will extract Wikipedia page information that we are interested in, mainly focusing on video game related pages from 2018 to 2020 in order to analyze the changes that the pandemic had on the video game industry.
 
 
-# To what extent can English Wikipedia pages serve as a reliable estimate of the average video game popularity?
+## To what extent can English Wikipedia pages serve as a reliable estimate of the average video game popularity?
+
 
 In this section we look at the possibility of english wikipedia pages being able to represent the global average and trend of video games. This is likely as video games are often released in english and do not always have other languages. Furthermore a lot of countries speak english on top of their native languages since english is the most common language worldwide. Studies show that 1.45 billion people speak english, and this encompasses more the higher classes. Therefore the people more likely to have access to video games often speak english, again explaining why english wikipedia pages could serve as a reliable estimate of the average video game popularity.
+
+### Data Processing
+
+Sup
+
+### Analysis
 
 Take a look at the graph below, unsurprisingly, the lockdown in Great Britain is not representative of the average mobility as can be seen below. This is to be expected as the lockdowns were decided by every country individually and had nothing to do with their language.
 
@@ -23,7 +30,7 @@ Obviously the COVID-19 lockdown increased the page views related to video games,
 
 ![Branching](Website_Images/Percent_pageviews.png)
 
-Furthermore, when we compare the trends individually, we can still match the english to be the average, no matter how restrictive the lockdown was. However it matches the semi_restrictive the best with a reduction of 2.5, while the reduction had to be adjusted for the restrictive and unrestrictive to 2.
+Furthermore, when we compare the trends individually, we can still match the english to be the average, no matter how restrictive the lockdown was. However it matches the semi_restrictive lockdowns the best.
 
 ![Branching](Website_Images/Restrictive_2.png)
 ![Branching](Website_Images/Semi_25.png)
