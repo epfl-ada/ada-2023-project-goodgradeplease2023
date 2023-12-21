@@ -13,6 +13,8 @@ from datetime import datetime
 import statsmodels.api as sm
 from scipy.stats import pearsonr
 from sklearn.preprocessing import StandardScaler
+import plotly.graph_objects as go
+from plotly.subplots import make_subplots
 import warnings
 warnings.filterwarnings("ignore")
 
@@ -81,7 +83,7 @@ def choose_restrictiveness(choice, english):
     return data, df_code
 
 def plot_percent_pageviews(d, df_code, interventions):
-    fig, ax = plt.subplots(figsize=(20, 20))
+    fig = make_subplots(rows=1, cols=1, subplot_titles=['Percentage of Wikipedia page views related to video games'])
     all_lines = []
     max_length = 0  # Track the maximum length of y_fit arrays
 
@@ -117,10 +119,44 @@ def plot_percent_pageviews(d, df_code, interventions):
         max_length = max(max_length, len(y_fit))
 
         # Plot individual lines
-        ax.plot(dates, numbers, color='lightgrey', lw=1)
-        ax.plot(pd.to_datetime(x, unit='s'), y_fit, label=f'{df_code.index[i]} - Trend Line')  # Convert x back to datetime for plotting
+        fig.add_trace(go.Scatter(x=dates, y=numbers, mode='lines', line=dict(color='lightgrey', width=0.5), showlegend=False, opacity=0.5))
+        
+        if c =='fr':
+            fig.add_trace(go.Scatter(x=dates, y=y_fit, mode='lines', line=dict(color='green', width=1.5), name=f'{df_code.index[i]} - Trend Line', showlegend=True))
+        if c =='da':
+            fig.add_trace(go.Scatter(x=dates, y=y_fit, mode='lines', line=dict(color='orange', width=1.5), name=f'{df_code.index[i]} - Trend Line', showlegend=True))
+        if c =='de':
+            fig.add_trace(go.Scatter(x=dates, y=y_fit, mode='lines', line=dict(color='yellow', width=1.5), name=f'{df_code.index[i]} - Trend Line', showlegend=True))
+        if c =='it':
+            fig.add_trace(go.Scatter(x=dates, y=y_fit, mode='lines', line=dict(color='purple', width=1.5), name=f'{df_code.index[i]} - Trend Line', showlegend=True))
+        if c =='nl':
+            fig.add_trace(go.Scatter(x=dates, y=y_fit, mode='lines', line=dict(color='pink', width=1.5), name=f'{df_code.index[i]} - Trend Line', showlegend=True))
+        if c =='no':
+            fig.add_trace(go.Scatter(x=dates, y=y_fit, mode='lines', line=dict(color='black', width=1.5), name=f'{df_code.index[i]} - Trend Line', showlegend=True))
+        if c =='sr':
+            fig.add_trace(go.Scatter(x=dates, y=y_fit, mode='lines', line=dict(color='grey', width=1.5), name=f'{df_code.index[i]} - Trend Line', showlegend=True))
+        if c =='sv':
+            fig.add_trace(go.Scatter(x=dates, y=y_fit, mode='lines', line=dict(color='brown', width=1.5), name=f'{df_code.index[i]} - Trend Line', showlegend=True))
+        if c =='ko':
+            fig.add_trace(go.Scatter(x=dates, y=y_fit, mode='lines', line=dict(color='mediumorchid', width=1.5), name=f'{df_code.index[i]} - Trend Line', showlegend=True))
+        if c =='ca':
+            fig.add_trace(go.Scatter(x=dates, y=y_fit, mode='lines', line=dict(color='tan', width=1.5), name=f'{df_code.index[i]} - Trend Line', showlegend=True))
+        if c =='fi':
+            fig.add_trace(go.Scatter(x=dates, y=y_fit, mode='lines', line=dict(color='olive', width=1.5), name=f'{df_code.index[i]} - Trend Line', showlegend=True))
+        if c =='ja':
+            fig.add_trace(go.Scatter(x=dates, y=y_fit, mode='lines', line=dict(color='dodgerblue', width=1.5), name=f'{df_code.index[i]} - Trend Line', showlegend=True))
+        if c =='en':
+            fig.add_trace(go.Scatter(x=dates, y=y_fit, mode='lines', line=dict(color='lawngreen', width=1.5), name=f'{df_code.index[i]} - Trend Line', showlegend=True))
 
-        ax.axvline(date_object, color='blue', lw=1.5, linestyle="-", alpha=0.7)
+        fig.add_shape(go.layout.Shape(
+            type='line',
+            x0=date_object,
+            x1=date_object,
+            y0=0,
+            y1=1,
+            line=dict(color='blue', width=1.5, dash='dash'),
+            layer='below'
+        ))
 
         # Add individual lines to the list
         all_lines.append(y_fit)
@@ -132,31 +168,25 @@ def plot_percent_pageviews(d, df_code, interventions):
     average_line = np.nanmean(all_lines_padded, axis=0)
 
     # Plot the average line as a thick blue line
-    #ax.plot(pd.to_datetime(x, unit='s'), average_line, label='Average Trend', color='red', lw=2)
+    fig.add_trace(go.Scatter(x=dates, y=average_line, mode='lines', name='Average Trend', line=dict(color='red', width=3)))
 
-    ax.grid(True)
-    ax.set_title('Percentage of Wikipedia page views related to video games')
-    ax.set_xlabel('Date')
-    ax.set_ylabel('Percentage')
-    ax.set_xlim(min(dates), max(dates))
-    ax.set_ylim(0, 0.015)
+    # Update layout
+    fig.update_layout(
+        xaxis=dict(title='Date', tickangle=45, tickmode='array'),
+        yaxis=dict(title='Percentage', range=[0, 0.015]),
+        showlegend=True,
+        height=600,
+        width=800,
+    )
 
-    # Adjust x-axis labels
-    # Get the dates for every 90 days
-    selected_dates = pd.date_range(start=dates[0], end=dates[-1], freq='90D')
-
-    # Format the dates as 'YYYY-MM-DD' and remove the time
-    ax.set_xticks(selected_dates, selected_dates.strftime('%Y-%m-%d'), rotation=45)
-
-    # Add legend
-    ax.legend()
-
-    plt.tight_layout()
-    plt.show()
+    fig.show()
     return
 
-def plot_normalized_percent_pageviews(d, df_code, interventions, reduction):
-    fig, ax = plt.subplots(figsize=(20, 20))
+def plot_normalized_percent_pageviews(d, df_code, interventions):
+# Assuming df_code, d, and interventions are defined as in your Matplotlib code
+
+    fig = go.Figure()
+
     all_lines = []
     max_length = 0  # Track the maximum length of y_fit arrays
 
@@ -181,85 +211,145 @@ def plot_normalized_percent_pageviews(d, df_code, interventions, reduction):
             line_width = 6  # Set thickness for England line
             x2 = [datetime.timestamp(k) for k in dates]
             y2 = [val for val in numbers if not math.isnan(val)]
-            
+
         else:
             x = [datetime.timestamp(k) for k in dates]
             y = numbers
             line_color = 'grey'
             line_width = 2  # Set default thickness for other lines
 
-        # Standardize the data
-        #y = StandardScaler().fit_transform(np.array(y).reshape(-1, 1)).flatten()
-
         degree = 4
         coefficients = np.polyfit(x, y, degree)
         polynomial = np.poly1d(coefficients)
-        
 
         y_fit = polynomial(x)
 
-        # Offset each curve
         index = dates.get_loc(date_object)
         mean = y_fit[0:index].mean()
         offset = 0 - mean
         y_fit = y_fit + offset
-        
+
         if c == 'en':
-            coefficients2 = np.polyfit(x2,y2,degree)
+            fig.add_trace(go.Scatter(x=pd.to_datetime(x, unit='s'), y=y_fit,
+                                mode='lines',
+                                name=f'{df_code.index[i]} - Trend Line',
+                                line=dict(color=line_color, width=line_width),
+                                showlegend=True))
+            coefficients2 = np.polyfit(x2, y2, degree)
             polynomial2 = np.poly1d(coefficients2)
             index2 = dates.get_loc(date_object)
             mean2 = y_fit[0:index].mean()
             offset2 = 0 - mean2
             y_fit2 = polynomial(x2)
             y_fit2 = y_fit2 + offset
-            y_fit2 = y_fit2 /reduction
-            max_length = max(max_length, len(y_fit))
-            ax.plot(pd.to_datetime(x, unit='s'), y_fit2, label=f'Scaled England - Trend Line', color='orange', lw=line_width)
-            all_lines.append(y_fit2)
-        
-        # Track the maximum length
+            y_fit2 = y_fit2 / 2.5
+            max_length = max(max_length, len(y_fit2))
+            fig.add_trace(go.Scatter(x=pd.to_datetime(x, unit='s'), y=y_fit2,
+                                    mode='lines',
+                                    name=f'Scaled England - Trend Line',
+                                    line=dict(color='orange', width=line_width)))
+
         max_length = max(max_length, len(y_fit))
+        
+        if c != 'en':
+            fig.add_trace(go.Scatter(x=pd.to_datetime(x, unit='s'), y=y_fit,
+                                    mode='lines',
+                                    name=f'{df_code.index[i]} - Trend Line',
+                                    line=dict(color=line_color, width=line_width),
+                                    showlegend=False))
 
-        # Plot only the trend lines
-        ax.plot(pd.to_datetime(x, unit='s'), y_fit, label=f'{df_code.index[i]} - Trend Line', color=line_color, lw=line_width)
-
-        # Add individual lines to the list
         all_lines.append(y_fit)
 
     # Pad shorter arrays with NaN values
-    all_lines_padded = [np.pad(line, (0, max_length - len(line)), 'constant', constant_values=np.nan) for line in all_lines]
-
+    all_lines_padded = all_lines
+    all_lines_padded = np.array(all_lines_padded)
     # Calculate the average line for all countries
     average_line = np.nanmean(all_lines_padded, axis=0)
+    average_line_restrictive = np.nanmean(all_lines_padded[[0,3,6,9,12],:], axis=0)
+    average_line_semi = np.nanmean(all_lines_padded[[1,2,4,5,10,12],:], axis=0)
+    average_line_unrestrictive = np.nanmean(all_lines_padded[[7,8,11,12],:], axis=0)
 
     # Plot the average line as a thick blue line
-    ax.plot(pd.to_datetime(x, unit='s'), average_line, label='Average Trend', color='blue', lw=6)
+    fig.add_trace(go.Scatter(x=pd.to_datetime(x, unit='s'), y=average_line,
+                            mode='lines',
+                            name='Average Trend',
+                            line=dict(color='blue', width=6)))
+    fig.add_trace(go.Scatter(x=pd.to_datetime(x, unit='s'), y=average_line_restrictive,
+                            mode='lines',
+                            name='Average Restrictive Trend',
+                            line=dict(color='blue', width=6)))
+    fig.add_trace(go.Scatter(x=pd.to_datetime(x, unit='s'), y=average_line_semi,
+                            mode='lines',
+                            name='Average Semi-Restrictive Trend',
+                            line=dict(color='blue', width=6)))
+    fig.add_trace(go.Scatter(x=pd.to_datetime(x, unit='s'), y=average_line_unrestrictive,
+                            mode='lines',
+                            name='Average Unrestrictive Trend',
+                            line=dict(color='blue', width=6),))
 
-    ax.grid(True)
-    ax.set_title('Normalized Percentage of Wikipedia page views related to video games')
-    ax.set_xlabel('Date')
-    ax.set_ylabel('Normalized Percentage')
-    ax.set_xlim(min(dates), max(dates))
+    # Add buttons for toggling between different graphs
+    buttons = [
+        dict(label='All Countries',
+            method='update',
+            args=[{'visible': [True,True,True,True,True,True,True,True,True,True,True,True,True,True,True,False,False,False]}],
+            name='All Countries'),
+        dict(label='Restrictive Countries',
+            method='update',
+            args=[{'visible': [True,False,False,True,False,False,True,False,False,True,False,False,True,True,False,True,False,False]}]),
+        dict(label='Semi-Restrictive Countries',
+            method='update',
+            args=[{'visible': [False,True,True,False,True,True,False,False,False,False,True,False,True,True,False,False,True,False]}]),
+        dict(label='Unrestrictive Countries',
+            method='update',
+            args=[{'visible': [False,False,False,False,False,False,False,True,True,False,False,True,True,True,False,False,False,True]}]),
+    ]
 
-    # Adjust x-axis labels
-    # Get the dates for every 90 days
-    selected_dates = pd.date_range(start=dates[0], end=dates[-1], freq='90D')
+    fig.update_layout(
+        title='Comparing Normalized Percentage of Wikipedia page views related to video games to English',
+        xaxis=dict(title='Date'),
+        yaxis=dict(title='Normalized Percentage'),
+        xaxis_range=[min(dates), max(dates)],
+        xaxis_tickvals=pd.to_datetime(pd.date_range(start=dates[0], end=dates[-1], freq='90D')),
+        xaxis_ticktext=pd.date_range(start=dates[0], end=dates[-1], freq='90D').strftime('%Y-%m-%d'),
+        legend=dict(x=0, y=1),
+        updatemenus=[{'type': 'buttons',
+                    'showactive': True,
+                    'buttons': buttons,
+                    'active': 0,
+                    'x': 1.3,
+                    'y': 1}]
+    )
+    fig.update_traces(visible=False, selector=dict(name='Average Restrictive Trend'))
+    fig.update_traces(visible=False, selector=dict(name='Average Semi-Restrictive Trend'))
+    fig.update_traces(visible=False, selector=dict(name='Average Unrestrictive Trend'))
 
-    # Format the dates as 'YYYY-MM-DD' and remove the time
-    ax.set_xticks(selected_dates, selected_dates.strftime('%Y-%m-%d'), rotation=45)
-
-    # Add legend
-    ax.legend()
-
-    plt.tight_layout()
-    plt.show()
+    fig.show()
     return
 
 def plot_mobility(d, df_code, interventions):
-    fig, axs = plt.subplots(3, 1, sharex = True, sharey = True, figsize=(6,8))
+    # Sample data
+    # Assuming df_code, d, and interventions are defined
+
+    # Create subplot
+    fig = make_subplots(rows=1, cols=1, subplot_titles=['Mobility'], vertical_spacing=0.1)
+
+    # Define dropdown menu
+    lockdown_types = ['Restrictive', 'Semi-Restrictive', 'Unrestrictive']
+    lockdown_countries = {
+        'Restrictive': ['fr', 'ca', 'it', 'sr'],
+        'Semi-Restrictive': ['da', 'de', 'nl', 'no', 'fi', 'en'],
+        'Unrestrictive': ['ko', 'ja', 'sv']
+    }
+
+    buttons = [dict(label=lockdown_type, method='update',
+                    args=[{'visible': [c in lockdown_countries[lockdown_type] for c in df_code['lang']]}])
+            for lockdown_type in lockdown_types]
+
+    fig.update_layout(
+        updatemenus=[dict(type='dropdown', active=0, buttons=buttons, x=0.1, y=1.15)],
+    )
 
     for i, c in enumerate(df_code['lang']):
-
         dt = d[c]["topics"]["Culture.Media.Video games"]["percent"]
         dates = list(dt.keys())
         numbers = list(dt.values())
@@ -268,18 +358,18 @@ def plot_mobility(d, df_code, interventions):
         if c == 'sv':
             x = [datetime.timestamp(k) for k in dates]
             x = x[365:]
-            y = [val for val in numbers if not math.isnan(val)]
+            y = [val for val in numbers if not np.isnan(val)]
         else:
             x = [datetime.timestamp(k) for k in dates]
             y = numbers
 
-        #creating the approximated curve
+        # Creating the approximated curve
         degree = 5
         coefficients = np.polyfit(x, y, degree)
         polynomial = np.poly1d(coefficients)
         y_fit = polynomial(x)
 
-        #converting the mobility date (str) into a np.datetime64 to be able to use it
+        # Converting the mobility date (str) into a np.datetime64 to be able to use it
         mobility_g = interventions.loc[c]['Mobility']
         format_string = "%Y-%m-%d"
         date_object = np.datetime64(datetime.strptime(mobility_g, format_string).date())
@@ -290,33 +380,27 @@ def plot_mobility(d, df_code, interventions):
         offset = 0 - mean
         y_fit = y_fit + offset
 
-        col=0
-        if c in ['fr', 'ca', 'it', 'sr']:
-            row = 0
-        else:
-            if c in ['ko', 'ja', 'sv']:
-                row = 2
-            else:
-                row = 1
+        # Convert x back to datetime for plotting
+        x_datetime = pd.to_datetime(x, unit='s')
 
-        axs[row].plot(pd.to_datetime(x, unit='s'), y_fit, label=c)  # Convert x back to datetime for plotting
+        # Plot the trace
+        fig.add_trace(go.Scatter(x=x_datetime, y=y_fit, mode='lines', name=c, visible=False))
 
-        axs[row].grid(True)
-        axs[row].set_xlabel('Date')
-        axs[row].set_ylabel('Percentage')
-        axs[row].set_xlim(min(dates), max(dates))
+    # Show the initial traces
+    fig.data[0].visible = True
+    fig.data[3].visible = True
+    fig.data[6].visible = True
+    fig.data[9].visible = True
 
-        # Get the dates for every 90 days
-        selected_dates = pd.date_range(start=dates[0], end=dates[-1], freq='90D')
+    # Customize layout
+    fig.update_layout(
+        height=400,
+        width=800,
+        showlegend=True,
+        legend=dict(x=1.02, y=1.0),  # Set x position greater than 1 to move legend to the right
+        xaxis=dict(title='Date', tickangle=45, tickmode='array'),
+        yaxis=dict(title='Percentage'),
+    )
 
-        # Format the dates as 'YYYY-MM-DD' and remove the time
-        axs[row].set_xticks(selected_dates, selected_dates.strftime('%Y-%m-%d'), rotation=45)
-
-        axs[row].legend()
-
-    axs[0].set_title('Mobility for a very restrictive lockdown')
-    axs[1].set_title('Mobility for a restrictive lockdown')
-    axs[2].set_title('Mobility for an unrestrictive lockdown')
-    plt.tight_layout()
-    plt.show()
+    fig.show()
     return
