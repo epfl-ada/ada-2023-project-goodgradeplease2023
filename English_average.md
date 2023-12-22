@@ -34,7 +34,6 @@ But why are the English Wikipedia pages so much more volatile than the average p
 
 Especially during the COVID-19 lockdown, English spiked a lot more than other countries. English is by far the most used language in the video game world for anything competitive. All the professional games are cast in English, so all the viewers and players of high level video games are forced to use English. Furthermore the lockdown allowed everyone that is higher level and passionate about video games to have a lot more time to dedicate to it than previously. Furthermore someone less passionate would most likely not put as much time into video games and would be more likely to spend less of their time online.
 
-
 Before the COVID-19 lockdown, players often played the same games as they didn't have as much time to put into learning new ones. Since higher levels of video games are english speaking, they don't really need to look up their games on wikipedia as they already know it well enough. However during the lockdown, many new games rose to popularity (Among Us, Fall Guys), and these games pushed people to look them up and learn the new games, therefore the spike in english wikipedia pages during the lockdown. On top of that the people that play more often enjoy playing with add-ons to the games, which are almost always solely in English. However the higher level players tend to always return to their game of choice after the hype of the new games die down.
 
 ![Branching](Website_Images/Among_Us.png)
@@ -47,15 +46,11 @@ This really is a great example of how the game has to gain in popularity in engl
 
 Obviously the COVID-19 lockdown increased the page views related to video games, but we can also see below that video games increased more relatively to other pages during the COVID-19 lockdown. This is important because all page views increased as we could see above when we showed the total amount of wikipedia searches. Unfortunately we cannot see the longer lasting effect that COVID-19 had on the pageviews a few years after the lockdown due to the lack of data with this dataset.
 
+Furthermore, when we compare the trends individually, we can still match the english to be the average, no matter how restrictive the lockdown was. However it matches the semi_restrictive lockdowns the best. Look at the graph below and toggle between the different restrictivenesses or look at all of them at once and see for yourself that english matches the average trends quite well when toned down.
+
 ![Branching](Website_Images/percent_pageviews_normalized.png)
 
-Furthermore, when we compare the trends individually, we can still match the english to be the average, no matter how restrictive the lockdown was. However it matches the semi_restrictive lockdowns the best.
-
-![Branching](Website_Images/Restrictive_2.png)
-![Branching](Website_Images/Semi_25.png)
-![Branching](Website_Images/Unrestrictive_2.png)
-
-This could be due to the fact that england had a semi-restrictive lockdown. But it can still represent the others' averages as many countries use enlish other than england.
+We could also look at the fact that england had a semi-restrictive lockdown and therefore represents the average of those countries the best, but that isn't the main point we are interested in as we want to see if the english pages are a good representation of the worldwide average in order to be able to predict the worldwide trend of games.
 
 ![Branching](Website_Images/triple_mobility.png)
 
