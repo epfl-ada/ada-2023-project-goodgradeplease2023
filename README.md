@@ -38,7 +38,7 @@ To find the potential links between the mobility data and interest increase in g
 
 ### Research Question 2:
 
-Stp 
+We used the global mobility dataset and the json dataset. For the JSON dataset we extracted the video games pageviews percentage  to be sure to capture an increase in the attention for video games and not only an increase on the internet traffic. Thanks to the mobility dataset we have been able to categorize the different country according to their lockdown intensity. With the data extracted from the json file we can then perform a Pearson correlation test to know wether yes or no the 2 time series are correlated. Also, for each group, we did a measure of the average pageviews before and after the lockdown, and use a 95% confidence interval to know if the lockdown intensity of each group had an impact on the change on the average. 
 
 ### Research Question 3:
 
