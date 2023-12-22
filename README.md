@@ -37,7 +37,7 @@ To enrich our understanding, we have included additional datasets as well as usi
 | Student | Task |
 | -------- | -------- |
 | Kyan Achtari | Creating the data story. Cleaning and commenting the code. Making README. Answering Questions 3.1 & 3.2 |
-| Mehdi Abdallahi | Creating the data story. Answering Question 4.1|
+| Mehdi Abdallahi | Creating the data story. Cleaning and commenting the code. Answering Question 4.1|
 | Corentin Plumet | Creating the data story. Creating the website. Answering Questions 2.1 & 2.2 |
-| Zhuofu Zhou | Answering Questions 1.1 & 1.2 |
-| Yichen Liu | JSP |
+| Zhuofu Zhou | Creating the data story. Answering Questions 1.1 & 1.2 |
+| Yichen Liu | Creating the data story. Answering Questions 1.1 & 1.2 |
