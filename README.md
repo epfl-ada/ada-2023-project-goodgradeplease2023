@@ -30,7 +30,23 @@ To enrich our understanding, we have included additional datasets as well as usi
 
 ## Analysis:
 
+For our analysis we extract the data from all the datasets and after having done some data wrangling and preprocessing. We use it to extract representative graphs in order to answer the research questions.
 
+### Research Question 1:
+
+To find the potential links between the mobility data and interest increase in games from different countries, we used the google mobility data and the specific Wikipedia pageviews on game topics in the time series, with the intention to make an introductory exploration on this correlation. Furthermore, we tried to explore deeper into different game genres and analyze the different game preferences from game players in different countries. We extracted and categorized games via the Wikidata API and analyze the pageview changes during the lockdown country by country. From this analysis, we realize that the negative correlations between mobility and interest in games may exist and there are different patterns on the interest shift on games in different countries during the COVID-19 period. In this way, we can gain a good support on the statistical inferences on the datasets in our following data story.
+
+### Research Question 2:
+
+COCOOOCOCOCOCO
+
+### Research Question 3:
+
+To answer this question, we used the interventions and global mobility datasets in order to compare the pageviews of all countries. With this data we calculated the average trends for all countries and did a comparison with english in order to answer the question. Thanks to this we can say that the English Wikipedia pages are in fact very useful in order to predict the worldwide trends. Furthermore to analyze more specifc games, we used a web API in order to extract more information from the web.
+
+### 4:
+
+For this question, we used the ‘intervention' dataset to get the dates of the turning point events. We also used an API to fetch the pageviews of different boardgames in different languages to analyze the popularity trends during COVID-19. The 'intervention' dataset was crucial in pinpointing the COVID-19 periods for various countries, allowing for a correlation between lockdowns and changes in boardgames popularity. The comparison revealed an unsual increase in board games' popularity, possibly linked to family-oriented activities during lockdowns, and the increase of quality time in family during the end of the year festivities.
 
 ## Work Splitting:
 
