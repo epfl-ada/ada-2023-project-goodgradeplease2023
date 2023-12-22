@@ -11,6 +11,7 @@ from scipy.stats import pearsonr
 import warnings
 warnings.filterwarnings("ignore")
 from sklearn.preprocessing import StandardScaler
+import os
 from helper_functions import *
 
 import requests
@@ -41,14 +42,6 @@ import dash
 from dash import dcc, html
 
 from scipy.stats import pearsonr
-
-
-
-  # Output html that you can copy paste
-#  fig.to_html(full_html=False, include_plotlyjs='cdn')
-  # Saves a html doc that you can copy paste
-#  fig.write_html("output.html", full_html=False, include_plotlyjs='cdn')
-
 
 
 def load_interventions():
@@ -194,6 +187,11 @@ def average_mobility(d, df_code, interventions, globalmob):
     )
 
     fig.show()
+
+    # Output html that you can copy paste
+    #fig.to_html(full_html=False, include_plotlyjs='cdn')
+    # Saves a html doc that you can copy paste
+    #fig.write_html("average_mobility.html", full_html=False, include_plotlyjs='cdn')
     return
 
 def plot_percent_pageviews(d, df_code, interventions):
@@ -294,6 +292,10 @@ def plot_percent_pageviews(d, df_code, interventions):
     )
 
     fig.show()
+    # Output html that you can copy paste
+    #fig.to_html(full_html=False, include_plotlyjs='cdn')
+    # Saves a html doc that you can copy paste
+    #fig.write_html("percent_pageviews.html", full_html=False, include_plotlyjs='cdn')
     return
 
 def plot_normalized_percent_pageviews(d, df_code, interventions):
@@ -438,6 +440,11 @@ def plot_normalized_percent_pageviews(d, df_code, interventions):
     fig.update_traces(visible=False, selector=dict(name='Average Unrestrictive Trend'))
 
     fig.show()
+
+    # Output html that you can copy paste
+    #fig.to_html(full_html=False, include_plotlyjs='cdn')
+    # Saves a html doc that you can copy paste
+    #fig.write_html("normalized_percent.html", full_html=False, include_plotlyjs='cdn')
     return
 
 def plot_mobility(d, df_code, interventions):
@@ -517,44 +524,48 @@ def plot_mobility(d, df_code, interventions):
     )
 
     fig.show()
+    # Output html that you can copy paste
+    #fig.to_html(full_html=False, include_plotlyjs='cdn')
+    # Saves a html doc that you can copy paste
+    #fig.write_html("mobility.html", full_html=False, include_plotlyjs='cdn')
     return
 
 def return_game_figure(column_name, df, interventions, title='views'):
 
-  fig, ax = plt.subplots(figsize=(15, 4))
+    fig, ax = plt.subplots(figsize=(15, 4))
 
-  # Allows the user to enter 'Call of Duty' instead of 'Call_of_Duty'
-  filtered_df = df[[column_name.replace(' ', '_')]]
+    # Allows the user to enter 'Call of Duty' instead of 'Call_of_Duty'
+    filtered_df = df[[column_name.replace(' ', '_')]]
 
-  # Choose a color palette from seaborn
-  color_palette = sns.color_palette("colorblind", len(filtered_df.columns))
+    # Choose a color palette from seaborn
+    color_palette = sns.color_palette("colorblind", len(filtered_df.columns))
 
-  # Convert the color palette to a list
-  list_of_colors = color_palette.as_hex()
+    # Convert the color palette to a list
+    list_of_colors = color_palette.as_hex()
 
-  # Plotting each subcolumn corresponding to the language
-  for column, color in zip(filtered_df.columns, list_of_colors):
+    # Plotting each subcolumn corresponding to the language
+    for column, color in zip(filtered_df.columns, list_of_colors):
 
-      # Plots the number of views for each language with respect to time
-      df_lang = interventions[interventions['lang']==column[1]]
-      ax.plot(filtered_df.index, filtered_df[column], label=column[1], color=color)
+        # Plots the number of views for each language with respect to time
+        df_lang = interventions[interventions['lang']==column[1]]
+        ax.plot(filtered_df.index, filtered_df[column], label=column[1], color=color)
 
-      # Plots the period of lockdown in bold
-      start_index = df_lang['Mobility'].item()
-      end_index = df_lang['Normalcy'].item()
-      limits_df = filtered_df.loc[start_index:end_index]
-      ax.plot(limits_df.index, limits_df[column], color=color, linewidth=5)
+        # Plots the period of lockdown in bold
+        start_index = df_lang['Mobility'].item()
+        end_index = df_lang['Normalcy'].item()
+        limits_df = filtered_df.loc[start_index:end_index]
+        ax.plot(limits_df.index, limits_df[column], color=color, linewidth=5)
 
-  # Adding legend, labels, and title
-  ax.set_yscale('log')
-  ax.legend(loc='upper right',fontsize=7)
-  ax.set_xlabel('Date')
-  ax.set_ylabel('Views on the page (log scale)')
-  if title == 'views':
-    ax.set_title(f'Page Views Over Time for {column_name}')
-  if title == 'percentage':
-    ax.set_title(f'Percentage of Total Wikipedia Views for {column_name}')
-  return fig
+    # Adding legend, labels, and title
+    ax.set_yscale('log')
+    ax.legend(loc='upper right',fontsize=7)
+    ax.set_xlabel('Date')
+    ax.set_ylabel('Views on the page (log scale)')
+    if title == 'views':
+        ax.set_title(f'Page Views Over Time for {column_name}')
+    if title == 'percentage':
+        ax.set_title(f'Percentage of Total Wikipedia Views for {column_name}')
+    return fig
 
 def return_specific_game():
     interventions = pd.read_csv('interventions.csv')
@@ -996,7 +1007,7 @@ def visualize_genres_distribution(stats_df, others_threadshold):
     fig.show()
 
 
-def visualize_pageviews_in_genre(pageviews_filepath, genres_filepath):
+def visualize_pageviews_in_genre(pageviews_filepath, genres_filepath):l
     pageviews = pd.read_csv(pageviews_filepath)
     game_genres = pd.read_csv(genres_filepath)
     pageviews.columns = ['Game', 'lang', 'timestamp', 'views']
